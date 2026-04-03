@@ -1,0 +1,249 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FlexContainer
+
+One-dimensional layout model
+
+display: flex or inline-flex
+
+  flex = The container behaves like a block-level element (taking up the full width available)
+  inline-flex = The container behaves like an 
+                 inline-leve element(taking up only the space its content needs)
+   
+
+-flex-direction(Main Axis) after cross axis
+  flex-direction: row(default) Main axis is horizontal, left-to-right. Cross axis is vertical
+  flex-direction: row-reverse(no default) Main axis is horizontal, right-to-left. Cross axis is vertical.
+  flex-direction: column(no default) Main axis is vertical, top-to-bottom. Cross axis is horizontal.
+  flex-direction: column-reverse(no default) Main axis is vertical, bottom-to-top. Cross axis is horizontal.
+
+-justify-content(Main Axis)
+  This aligns items along the main axis.
+
+  flex-start(default) Items are packed toward the start of the main axis.
+  flex-end(no default) Items are packed toward the end of the main axis.
+  center(no default) Items are centered along the main axis.
+  space-between(no default) Items are evenly distributed; the first item is at the start, the last item is at the end.
+  space-around(no default) Items are evenly distributed with equal space around them. (Note: the space between two items will be double the space at the ends.)
+  space-evenly(no default) Items are distributed so that the spacing between any two items and the space to the edges is equal.
+
+
+-align-items(cross axis)
+  The aligns items along the cross axis
+  
+  stretch(default): Items stretch to fill the container's height (if flex-direction: row) or
+                    width (if flex-direction: column) all this work if flex item doesn't have height for flex-direction: row, 
+                    and no work for flex-firection: column when flex item has width
+  
+  flex-start: Items are packed to the start of the cross axis.
+  flex-end: Items are packed to the end of the cross axis.
+  center: Itemd are centered on the cross axis.
+  baseline: items are aligned according to their text baseline
+
+-flex-wrap
+  This determines if items should wrap onto a new line or shrink to fit.
+
+    nowrap(default) All items will be forced onto one line, which may
+                    cause them to overflow the container.
+    wrap(no default) Items will wrap onto a new line from top to bottom if they run out of space.
+    wrap-reverse(no default) Items will wrap onto a new line from bottom to top.
+
+-align-content(cross axis)
+   This aligns the lines of flex items along the cross axis. It onñy has
+   an effect when there are multiple lines of items (flex-wrap is set to wrap or wrap-reverse
+   and items are actually wrapping)
+  
+   It accepts the same values as justify-content:(flex-start, flex-end, center, space-between, space-around, space-evenly) plus
+   stretch(default), which makes each line stretch to take up remaining space.
+
+-gap, row-gap, column-gap
+   This is the modern and simplest way to create space between flex items.
+
+   gap: 10px 20px: Sets 10px gap between rows and a 20px gap between columns.
+   gap: 15px: Sets a 15px gap for both rows and columns.
+
+-flex-flow
+    This is a shorthand property for flex-direction and flex-wrap.
+       Examole: flex-flow: row wrap; is the same as setting flex-direction: row; and
+       flex-wrap: wrap;
+
+
+[PROPERTIES FOR THE FLEX ITEMS (The Children)
+
+These properties are set on the child elements to
+control their individual behavior within the flex
+container.
+
+properties:
+
+-order
+
+This changes the visual order of a flex item without
+changing the HTML.
+
+  .The default value is 0. Items are sorted in ascending order.
+  You can use negative numbers.
+  An item with "order: -1" will appear before an item with "order: 0"
+
+-flex-grow
+
+This defines an item's ability to grow if there is 
+extra space.
+
+  .It accepts a unitless numbers (1,2,3). 
+  The default is 0(don't grow).
+  .If all items have "flex-grow: 1", they will share
+  the extra space equally.
+  .If one item has "flex-grow:2" and others have "1", it
+  will take up twice as much of the extra space as the
+  others.
+
+-flex-shrink
+
+This defines an item's ability to shrink if there isn't enough space.
+
+   .It accepts a unitless number. The default is 1(can shrink)
+   .Setting "flex-shrink:0" prevents an item from
+   shrinking smaller than its "flex-basis" size.
+
+-flex-basis
+
+This defines the default or "ideal" size of an item before any growing
+or shrinking happens.
+   
+   .It can be a lenght (px,%,rem,etc) or a keyboard.
+   .The default is auto, which means the item's width or height
+   property is used.
+
+-flex
+
+This is the powerful shorthand for "flex-grow", "flex-shrink" and "flex-basis" in that
+order.
+
+ ."flex: 0 1 auto;(The default value)"
+ .flex: 1;(Shorthand for "1 1 0%"). The item can grow and shrink and
+                                   starts from a basis of 0, meaning it will
+                                   expand to take up a proportional share of the
+                                   available space.
+  
+.flex: none;(Shorthand for "0 0 auto"). The item is coplety inflexible -       
+                                        it won't grow or
+                                        shrink.             
+
+
+-align-self
+
+  This allows you to override the container's "align-items" property for a single flex item.
+   
+   .It accepts the same values as "align-items"(stretch, flex-start, flex-end, center,
+                                                baseline) plus auto(default), which makes the item follow the
+                                                container's "align-items" rule.
+
+*/
+
+.parent {
+  height: 50%;
+  margin: 0 auto;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 20px 2px;
+}
+
+.child1,
+.child2,
+.child3,
+.child4 {
+  color: white;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+/* FlexItems 
+
+Once you set display: flex (.parent)
+its direct children such as .child1...child4
+automatically they become flex items
+and their own display properties like block or inline
+are mostly ignored for layout purposes.
+
+*/
+
+.child1 {
+  background-color: red;
+  /*order: 1;*/
+}
+.child2 {
+  background-color: yellow;
+  /*  order: 2; */
+  align-self: flex-end;
+}
+.child3 {
+  background-color: brown;
+  /*order: 3;*/
+}
+.child4 {
+  background-color: aqua;
+  /*order: 4;*/
+  flex-grow: 2;
+}
+
+/* 
+
+
+What Happens to Inline and Block Elements?
+
+This is a key point: once an element becomes 
+a flex item, its original display value doesn't 
+matter for its layout within the flex container.
+
+An element that was display: inline (like a <span>) will suddenly 
+start behaving like a block-level element. You can give it a width, 
+height, and vertical margin and padding, which you couldn't do before.
+
+An element that was display: block (like a <div>) will no longer take up 
+the full width by default. Instead, its size will be determined by its 
+content and the flex properties applied to it.
+
+Properties like float, clear, and vertical-align have no 
+effect on a flex item. Flexbox takes full control of the layout.
+
+
+
+------------------------
+
+
+flex-shrink has no effect when there's enough space in the flex container, and flex-self isn't a real property—the correct one is align-self.
+
+When flex-shrink Doesn't Work
+The flex-shrink property only applies when the flex items are too big to fit inside their container and need to shrink.
+
+It will have no visible effect if:
+
+There is extra space: If the combined size of all flex items is less than or equal to the size of the flex container, there's no need for anything to shrink.
+
+Wrapping is enabled: If flex-wrap: wrap; is set on the container, items will move to a new line instead of shrinking to fit on one line.
+
+In short: flex-shrink is for overflow situations. No overflow, no shrinking.
+
+-----------------------------
+
+
+align-self will have no visible effect when:
+
+There is no extra space on the cross axis. align-self positions an item within the available space along the cross axis (vertically in a row, horizontally in a column). If the container is only as tall as its tallest item (or as wide as its widest), there's no room for any item to move up or down, so center, flex-start, and flex-end will all look the same.
+
+The item is stretched: If align-self is set to its default of stretch, it will fill the cross-axis space, not align within it.
+
+
+*/

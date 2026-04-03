@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span#main-span {
+  text-align: center;
+  color: rgb(39, 210, 30);
+}
+
+/* *:first-child */
+p *:first-child {
+  color: yellow;
+}
+
+p[class] {
+  width: 50%;
+  margin: 0 auto;
+}
+
+p[class="f-paragraph"] {
+  font-size: 30px;
+}
+
+p[class~="s-paragraph"] {
+  font-size: 20px;
+}
+
+div[lang|="it"] {
+  color: lawngreen;
+}
+
+:lang(ja) {
+  color: aqua;
+}
+
+section[class^="main"] {
+  width: 70%;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+div[class^="first"] {
+  width: 50%;
+  margin: 0 auto;
+  color: black;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+div[class$="container"] {
+  width: 50%;
+  color: blue;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid blue;
+  text-align: center;
+}
+
+div[class*="border"] {
+  color: rgb(49, 49, 49);
+  border: 1px solid green;
+  text-align: center;
+}
+
+div[class^="black"] {
+  background-color: aqua;
+  border: 5px solid black;
+  border-radius: 5px;
+}

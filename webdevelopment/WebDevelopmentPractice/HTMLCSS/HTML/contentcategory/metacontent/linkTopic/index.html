@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+
+<link> 
+The <link> HTML element specifies relationships between the current document and an 
+external resource. This element is most commonly used to link to stylesheets, but is also used to 
+establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among 
+other things.
+
+
+Attributes:
+
+charset: No available in HTML5.
+
+crossorigin: This attribute indicates whether the linked resource is fetched with a CORS request. It can have the following values:
+ anonymous: The browser sends a CORS request without credentials (cookies, client-side SSL certificates, or HTTP authentication). This is the default value.
+ use-credentials: The browser sends a CORS request with credentials (cookies, client-side SSL certificates, or HTTP authentication).
+
+ href: This attribute specifies the URL of the linked resource. It is required when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+ hreflang: This attribute specifies the language of the linked resource. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+ disabled: This boolean attribute indicates that the linked resource is not currently active. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+ integrity: This attribute contains a cryptographic hash of the linked resource. It is used to ensure that the resource has not been tampered with. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+ media: This attribute specifies the media for which the linked resource is designed. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+ methods: This attribute specifies the HTTP methods that are allowed when fetching the linked resource. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+
+referrerpolicy: This attribute specifies the referrer policy to use when fetching the linked resource. It can have the following values:
+ no-referrer: The browser does not send a referrer header when fetching the linked resource.
+ no-referrer-when-downgrade: The browser sends a referrer header when the linked resource is fetched over a secure connection (HTTPS), but not when it is fetched over an insecure connection (HTTP). This is the default value.
+ origin: The browser sends only the origin of the document as the referrer when fetching the linked resource.
+ origin-when-cross-origin: The browser sends the full URL as the referrer when fetching the linked resource from the same origin, but only the origin when fetching it from a different origin.
+ same-origin: The browser sends the full URL as the referrer when fetching the linked resource from the same origin, but does not send a referrer header when fetching it from a different origin.
+ strict-origin: The browser sends the origin of the document as the referrer when fetching the linked resource from the same origin, but does not send a referrer header when fetching it from a different origin.
+ strict-origin-when-cross-origin: The browser sends the full URL as the referrer when fetching the linked resource from the same origin, but only the origin when fetching it from a different origin, and does not send a referrer header when fetching it from an insecure connection (HTTP).
+ unsafe-url: The browser sends the full URL as the referrer when fetching the linked resource, regardless of the security of the connection.
+
+ rel: This attribute specifies the relationship between the current document and the linked resource. It can have
+sizes: This attribute specifies the sizes of the linked resource. It is only used when the rel attribute is set to "icon" and is ignored in all other cases. And it has the following values:
+any: The linked resource can be used at any size.
+The value of the sizes attribute is a space-separated list of size descriptors. Each size descriptor is a string that consists of a width and height in pixels, separated by an "x". For example, "16x16" indicates that the linked resource is 16 pixels wide and 16 pixels tall.
+
+target: This attribute specifies the default browsing context for hyperlinks and forms. It can have the following values:
+_blank: Opens the linked document in a new window or tab.
+_self: Opens the linked document in the same browsing context as the current document. This is the default value.
+_parent: Opens the linked document in the parent browsing context of the current document. If there is no parent, it behaves the same as _self.
+_top: Opens the linked document in the top-level browsing context (the "highest" context that
+
+title: This attribute specifies the title of the linked resource. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+type: This attribute specifies the MIME type of the linked resource. It is only used when the rel attribute is set to "stylesheet" and is ignored in all other cases.
+
+as: This attribute specifies the type of content being loaded when the rel attribute is set to "preload". It can have the following values:
+ audio: The linked resource is an audio file.
+ document: The linked resource is a document.
+ embed: The linked resource is an embedded resource, such as a plugin or an iframe.
+ fetch: The linked resource is a resource that will be fetched using the Fetch API.
+ font: The linked resource is a font.
+ image: The linked resource is an image.
+ object: The linked resource is an object, such as a plugin or an iframe.
+ script: The linked resource is a script.
+ style: The linked resource is a stylesheet.
+ json: The linked resource is a JSON file.
+ track: The linked resource is a track, such as a subtitle or caption file.
+ video: The linked resource is a video file.
+ worker: The linked resource is a web worker script.
+
+blocking: This attribute is a boolean attribute that indicates whether the linked resource should be blocked from loading until the document has finished parsing. It is only used when the rel attribute is set to "preload" and is ignored in all other cases. 
+-->
+
+    <base href="http://localhost:5500/linkTopic/" target="_blank" />
+    <link rel="stylesheet" href="../linkTopic/styles/css1.css" />
+    <link rel="stylesheet" href="../linkTopic/styles/css2.css" />
+    <link rel="stylesheet" href="https://localhost:3001/linktopic/crossorigin"
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" />
+  </head>
+
+  <body>
+    <h1>Hello, this is an example of how you can use the link tag</h1>
+    <h2>Hello, this is an example of how you can use the link tag</h2>
+  </body>
+</html>

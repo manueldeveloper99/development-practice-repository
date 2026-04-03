@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+  
+    The base tag is used to specify a base URL for all relative URLs in a dcument. 
+    It can also specify a default target for all hyperlinks and forms in the document.
+  
+    Its Attributes:
+    
+    href: Specifies the base URL for all relative URLs in the document.
+    target: Specifies the default target for all hyperlinks and forms in the document.
+
+    Target values:
+    
+    _blank: Opens the linked document in a new window or tab.
+    _self: Opens the linked document in the same frame as it was clicked (this is default).
+
+    Advanced Usage (For iframes)
+If you embed a YouTube video or a Google map on your page, you're using an <iframe> (a "frame"). 
+  These values ​​control how links within that frame open:
+
+_parent: Opens the link in the immediate "parent frame." If you have a frame within another frame, the link will open in the top-level frame where it was clicked.
+
+_top: Breaks any number of frames. Opens the link in the main body of the entire browser window, replacing everything that was on the screen.
+
+
+
+If ../ means "go up one level" or move out of a folder, to go up two, three, or more levels, you simply have to chain them together.
+
+Go up 1 level: ../
+
+Go up 2 levels: ../../
+
+Go up 3 levels: ../../../
+
+Go up 4 levels: ../../../../
+
+
+    <base href="https://es.wikipedia.org/wiki/" target="_blank"/>
+  
+
+  -->
+
+    <base href="http://localhost:5500/baseTag/page2/" target="_blank" />
+
+    <title>Local Base Test</title>
+  </head>
+
+  <body>
+    <h2>Testing the &lt;base&gt; tag on my local machine</h2>
+    <p>
+      This file lives on your local hard drive, but check out what happens with
+      this link:
+    </p>
+
+    <a href="HTML">Leer artículo sobre HTML</a>
+    <br />
+    <a href="index2.html"> Go to page 2</a>
+    <br />
+    <a href="../page3/index3.html">Go to page 3</a>
+
+    <!--Go to wikipedia page
+
+Instead of going to the wikipedia page, it will try to find a file called HTML in the 
+same directory as this file, which is not there, so it will show an error. 
+If you click on the link to page 2 or page 3, it will open those pages in a new tab because of the target="_blank" attribute in the base tag.
+
+<a href="HTML"> Read about HTML on Wikipedia</a>
+
+-->
+  </body>
+</html>

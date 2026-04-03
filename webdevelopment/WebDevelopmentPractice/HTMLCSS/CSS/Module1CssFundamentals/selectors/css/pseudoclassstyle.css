@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Elemental pseudo-classes
+
+:defined
+:heading (no works)
+
+:defined 
+
+  - The :defined CSS pseudo-class represents any element that has been
+    defined. This includes any standard element built into the browser
+    and custom elements that have been successfully defined (with the CustomElmentRegestry.define() method)
+
+    HTML and CSS have no mechanism to register new element definitions. They can style any tag name you
+     write — but without JavaScript, a custom tag is just an “unknown element” to the browser and stays in 
+     the “undefined” bucket forever.
+That means:
+- It will never match :defined in pure HTML+CSS.
+- It will always match :not(:defined) instead.
+
+
+CSS example:
+
+
+STYLES FOR WHEN THE CUSTOM ELEMENT IS NOT YET DEFINED
+
+my-card:not(:defined){
+display: inline-block;
+padding:1em;
+background:#eee;
+color: #888;
+font-style: italic;
+border: 1px dashed #ccc;
+}
+
+STYLES FOR WHEN THE CUSTOM ELEMENT IS DEFINED
+
+my-card:defined{
+display: inline-block;
+padding: 1em;
+background: #d8f8d8;
+color: #222;
+font-weight: bold;
+border: 2px solid #4csf50;
+border-radiius: 8px;
+}
+
+*/
+
+my-card:not(:defined) {
+  display: inline-block;
+  padding: 1em;
+  background: #eee;
+  font-style: italic;
+  border: 1px dashed #ccc;
+}
+
+my-card:defined {
+  display: inline-block;
+  padding: 1em;
+  background: #d8f8d8;
+  color: #222;
+  font-weight: bold;
+  border: 2px solid green;
+  border-radius: 8px;
+}

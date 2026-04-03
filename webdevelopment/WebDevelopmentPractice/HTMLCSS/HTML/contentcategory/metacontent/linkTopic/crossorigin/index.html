@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cors Test</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
+
+  <body>
+    <!--
+The crossorigin attribute in the HTML <link> tag is used to specify how the 
+Browser must handle resource requests coming from a different source (different domain, protocol, or port) 
+that of the current page.
+
+Possible values
+
+anonymous: (This is the most recommended value for most use cases)
+The request is made without sending credentials
+If the server responds with Access-Control-Allow-Origin: * (or the specific origin), the resource is loaded
+If the server does not include the appropriate CORS headers, the resource does not load
+
+use-credentials:
+The request sends credentials (cookies, authentication)
+The server must respond with Access-Control-Allow-Origin other than * and with Access-Control-Allow-Credentials: true
+If these conditions are not met, the resource is not loaded
+
+-->
+
+    <h1>This is an example about cors usage</h1>
+
+    <p>
+      The crossorigin attribute in the HTML &lt;link&gt; tag is used to specify
+      how the browser must handle resource requests coming from a different
+      source.
+    </p>
+  </body>
+</html>

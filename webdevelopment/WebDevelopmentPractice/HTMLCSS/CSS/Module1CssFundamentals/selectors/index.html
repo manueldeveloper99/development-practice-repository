@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/style.css" />-->
+    <link rel="stylesheet" href="css/maincontainer.css" />
+  </head>
+
+  <body>
+    <my-element style="background-color: brown"
+      >This is my own element</my-element
+    >
+
+    <main>
+      <div class="main-container">
+        My direct parent is the main container
+        <span id="main-span">I'm a span</span>
+        <p class="f-paragraph">
+          I'm a paragraph, so this is an <b> example</b> <b> 1</b>
+        </p>
+        <p class="s-paragraph p-font">
+          I'm a paragraph also so this is an example
+        </p>
+        <p class="t-paragraph p-font">
+          I'm another paragraph, so this is an <b>example </b><b> 2</b>
+        </p>
+      </div>
+      <div lang="it-language">
+        Phrases in italian
+        <h2>Ciao mondo</h2>
+        <h2>Quella è una macchina</h2>
+        <h2>L'aereo può volare in alto</h2>
+      </div>
+
+      <div lang="ja">
+        <h2>こんにちは世界</h2>
+      </div>
+
+      <section class="main-section-container-1">
+        <div class="first-main-section-container-1-1">
+          <div class="2first-child-first-main-section-container">Div One</div>
+          <div class="black-square">
+            <div class="second-child-first-main-section-container-border">
+              Div Two
+            </div>
+            <div class="third-child-first-main-section-container-border">
+              Div Three
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--
+      <h1>Selectors</h1>
+
+      <header id="heading">HTML</header>
+
+      <p id="one">
+        Html is important cause basically is the structure of the website
+        <span class="highlight"> html is widely used </span> around the world
+        developers use it every time.
+      </p>
+      <p class="highlight">
+        But also we have css and css is the decoration of the webpage
+        <strong>without</strong> css webpages are simple and boring. We can
+        change a lot of things in our webpage if we use css such as font type,
+        color font, we can define a lot of things with css.
+      </p>
+      <p class="special">
+        Also we have JavaScript and javascript defines behavior of our
+        <em> webpage</em> so this means that as developers we can interact with
+        our webapage in different ways. Most of the webpages now are interactive
+        and we can interact with them in different ways.
+      </p>
+
+      <div class="notebox">This ia an informational note.</div>
+      <div class="notebox warning">This note shows a warning.</div>
+      <div class="notebox danger">This note shows danger!</div>
+      <div class="danger">
+        This won't get styled - it also needs to have the notebox class
+      </div>
+      <hr />
+      <article>
+        <p>Example 1 <span>I'm a span</span></p>
+        <p>Example 2</p>
+      </article>
+      <hr />
+      <section>
+        <p>Example 1</p>
+        <p>Example 2</p>
+      </section>
+      <br /><br />
+      <section>
+        <h1>Attribute presence and value selectors</h1>
+
+        <ul>
+          <li>Item 1</li>
+          <li class="a">Item 2</li>
+          <li class="a b">Item 3</li>
+          <li class="ab">Item 4</li>
+        </ul>
+      </section>
+      <br /><br />
+
+      <section>
+        <h1>Attribute substring matching selectors</h1>
+        <ul>
+          <li class="a">Item 1</li>
+          <li class="ab">Item 2</li>
+          <li class="bca">Item 3</li>
+          <li class="bcabc">Item 4</li>
+        </ul>
+      </section>
+      <br /><br />
+      <h1>Pseudo-classes and pseudo-elements</h1>
+      <section>
+        <article>
+          <p class="first">
+            This is an example in html that how you can use selectors for
+            different things in our webpage so we can manage our different tags
+            in a easy ways for our html document.
+          </p>
+
+          <p>
+            Besides of this you can also have a order and that means that you
+            don't need a class. Html give us the change to use this selectors
+            with CSS we can apply style to our webpage html and css work
+            together. All that give us different ways to manage our webpage in a
+            easy way.
+          </p>
+        </article>
+      </section>
+      <br /><br />
+      <h1>User-action pseudo classes</h1>
+      <section>
+        <p><a href="">Hover over me</a></p>
+      </section>
+      <br /><br />
+      <h1>Pseudo-element</h1>
+      <section>
+        <article>
+          <p>
+            This is an example in html that how you can use selectors for
+            different things in our webpage so we can manage our different tags
+            in a easy ways for our html document.
+          </p>
+
+          <p>
+            Besides of this you can also have a order and that means that you
+            don't need a class. Html give us the change to use this selectors
+            with CSS we can apply style to our webpage html and css work
+            together. All that give us different ways to manage our webpage in a
+            easy way.
+          </p>
+        </article>
+      </section>
+      <br /><br />
+      <section>
+        <section>
+          <p class="box">Content in the box in my HTML page.</p>
+        </section>
+        <section>
+          <p class="box2">Content in the box in my HTML page.</p>
+        </section>
+        <section>
+          <p class="box3">Content in the box in my HTML page.</p>
+        </section>
+      </section>
+
+      <br /><br />
+
+      <section>
+        <div class="box4">
+          <p>Text in .box4</p>
+        </div>
+        <p>Text not in .box4</p>
+      </section>
+
+      <br /><br />
+      <section>
+        <ul>
+          <li>Unordered item</li>
+          <li>
+            Unordered item
+
+            <ol>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ol>
+          </li>
+        </ul>
+      </section>
+
+      <br /><br />
+
+      <section>
+        <article>
+          <h1>A heading</h1>
+          <p>
+            This is an example in html that how you can use selectors for
+            different things in our webpage so we can manage our different tags
+            in a easy ways for our html document.
+          </p>
+
+          <p>
+            Besides of this you can also have a order and that means that you
+            don't need a class. Html give us the change to use this selectors
+            with CSS we can apply style to our webpage html and css work
+            together. All that give us different ways to manage our webpage in a
+            easy way.
+          </p>
+        </article>
+      </section>
+      <br /><br />
+      <section>
+        <article>
+          <h1>A heading</h1>
+          <p>I am a paragraph.</p>
+          <div>I am a div</div>
+          <p>I am another paragraph.</p>
+        </article>
+      </section>
+    </main>
+
+  --></body>
+</html>

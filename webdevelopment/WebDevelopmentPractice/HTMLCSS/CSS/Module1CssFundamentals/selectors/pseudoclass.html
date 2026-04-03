@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pseudoclassstyle.css" />
+    <title>Pseudo class</title>
+  </head>
+
+  <body>
+    <my-card>Loading component.....</my-card>
+
+    <script>
+      // Simulate async defination after 2 seconds
+      class MyCard extends HTMLElement {
+        connectedCallback() {
+          this.textContent = "✅ Custom element is now defined!";
+        }
+      }
+
+      setTimeout(() => {
+        customElements.define("my-card", MyCard);
+      }, 5000);
+    </script>
+  </body>
+</html>
